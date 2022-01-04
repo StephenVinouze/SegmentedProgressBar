@@ -9,9 +9,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
 import com.stephenvinouze.segmentedprogressbar.models.SegmentedProgressBarViewState
@@ -88,4 +91,164 @@ private fun DrawScope.drawSegment(coordinates: SegmentCoordinates, color: Segmen
         color = color.color,
         alpha = color.alpha,
     )
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithSpacing(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            spacing = 10.dp,
+            segmentColor = SegmentColor(
+                color = Color.White
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithSpacingAndPositiveAngle(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            spacing = 10.dp,
+            angle = 45f,
+            segmentColor = SegmentColor(
+                color = Color.White
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithSpacingAndNegativeAngle(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            spacing = 10.dp,
+            angle = -45f,
+            segmentColor = SegmentColor(
+                color = Color.White
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithCustomColor(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            spacing = 10.dp,
+            angle = -45f,
+            segmentColor = SegmentColor(
+                color = Color.Blue
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithCustomColorAndAlpha(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            spacing = 10.dp,
+            angle = -45f,
+            segmentColor = SegmentColor(
+                color = Color.Blue,
+                alpha = 0.3f
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithOneProgress(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            progress = 1f,
+            spacing = 10.dp,
+            angle = 45f,
+            segmentColor = SegmentColor(
+                color = Color.White
+            ),
+            progressColor = SegmentColor(
+                color = Color.Red
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithProgressInTransition(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            progress = 1.3f,
+            spacing = 10.dp,
+            angle = 45f,
+            segmentColor = SegmentColor(
+                color = Color.White
+            ),
+            progressColor = SegmentColor(
+                color = Color.Red
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithTwoProgress(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            progress = 2f,
+            spacing = 10.dp,
+            angle = 45f,
+            segmentColor = SegmentColor(
+                color = Color.White
+            ),
+            progressColor = SegmentColor(
+                color = Color.Red
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithThreeProgress(
+    viewState: SegmentedProgressBarViewState =
+        SegmentedProgressBarViewState(
+            segmentCount = 3,
+            progress = 3f,
+            spacing = 10.dp,
+            angle = 45f,
+            segmentColor = SegmentColor(
+                color = Color.White
+            ),
+            progressColor = SegmentColor(
+                color = Color.Red
+            )
+        )
+) {
+    SegmentedProgressBar(viewState)
 }
