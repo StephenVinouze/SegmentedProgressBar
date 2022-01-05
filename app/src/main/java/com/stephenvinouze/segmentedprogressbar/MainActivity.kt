@@ -84,15 +84,15 @@ fun Sample() {
                 Stepper(
                     modifier = Modifier.padding(top = 20.dp),
                     label = "Number of segments: ${segmentCount.toInt()}",
-                    onMinus = { segmentCount-- },
+                    onMinus = { if (segmentCount > 1) segmentCount-- },
                     onPlus = { segmentCount++ },
                 )
 
                 Stepper(
                     modifier = Modifier.padding(top = 20.dp),
                     label = "Progress: ${progress.toInt()}",
-                    onMinus = { progress-- },
-                    onPlus = { progress++ },
+                    onMinus = { if (progress > 0) progress-- },
+                    onPlus = { if (progress < segmentCount) progress++ },
                 )
 
                 RangePicker(
