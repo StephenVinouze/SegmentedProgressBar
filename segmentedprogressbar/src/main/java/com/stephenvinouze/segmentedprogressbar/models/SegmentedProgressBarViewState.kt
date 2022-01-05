@@ -9,7 +9,7 @@ data class SegmentedProgressBarViewState(
     @IntRange(from = 1) val segmentCount: Int,
     @FloatRange(from = 0.0) val progress: Float = 0f,
     @FloatRange(from = 0.0) val spacing: Dp = 0.dp,
-    @FloatRange(from = -80.0, to = 80.0) val angle: Float = 0f, // Reaching 90° is pointless since the bevel will be horizontal
+    @FloatRange(from = -60.0, to = 60.0) val angle: Float = 0f, // Beyond 60° the bevel breaks segments by nearing horizontal plane
     val segmentColor: SegmentColor = SegmentColor(),
     val progressColor: SegmentColor = SegmentColor(),
 )

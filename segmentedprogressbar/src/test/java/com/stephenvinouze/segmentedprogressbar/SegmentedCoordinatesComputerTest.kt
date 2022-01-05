@@ -123,9 +123,9 @@ class SegmentedCoordinatesComputerTest {
         val thirdSegmentCoordinates = helper.segmentCoordinates(2, segmentCount, width, height, spacing, angle)
 
         // THEN
-        firstSegmentCoordinates.shouldBeNear(0f, 0f, 30.5f, 19.0f)
-        secondSegmentCoordinates.shouldBeNear(40.5f, 29.0f, 71.0f, 59.5f)
-        thirdSegmentCoordinates.shouldBeNear(81.0f, 69.5f, width, width)
+        firstSegmentCoordinates.shouldBeNear(0f, 0f, 29.5f, 18.0f)
+        secondSegmentCoordinates.shouldBeNear(41.0f, 29.5f, 70.5f, 59.0f)
+        thirdSegmentCoordinates.shouldBeNear(82.1f, 70.5f, width, width)
     }
 
     @Test
@@ -143,9 +143,9 @@ class SegmentedCoordinatesComputerTest {
         val thirdSegmentCoordinates = helper.segmentCoordinates(2, segmentCount, width, height, spacing, angle)
 
         // THEN
-        firstSegmentCoordinates.shouldBeNear(0f, 0f, 22.8f, 34.4f)
-        secondSegmentCoordinates.shouldBeNear(32.8f, 44.4f, 55.6f, 67.2f)
-        thirdSegmentCoordinates.shouldBeNear(65.6f, 77.2f, width, width)
+        firstSegmentCoordinates.shouldBeNear(0f, 0f, 21.8f, 33.3f)
+        secondSegmentCoordinates.shouldBeNear(33.3f, 44.9f, 55.1f, 66.7f)
+        thirdSegmentCoordinates.shouldBeNear(66.7f, 78.2f, width, width)
     }
 
     @Test
@@ -165,8 +165,8 @@ class SegmentedCoordinatesComputerTest {
 
         // THEN
         noProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 0f, 0f)
-        oneProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 30.5f, 19.0f)
-        twoProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 71.0f, 59.5f)
+        oneProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 29.5f, 18.0f)
+        twoProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 70.5f, 59.0f)
         fullProgressionSegmentCoordinates.shouldBeNear(0f, 0f, width, width)
     }
 
@@ -187,8 +187,8 @@ class SegmentedCoordinatesComputerTest {
 
         // THEN
         noProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 0f, 0f)
-        oneProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 22.8f, 34.4f)
-        twoProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 55.6f, 67.2f)
+        oneProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 21.8f, 33.3f)
+        twoProgressionSegmentCoordinates.shouldBeNear(0f, 0f, 55.1f, 66.7f)
         fullProgressionSegmentCoordinates.shouldBeNear(0f, 0f, width, width)
     }
 

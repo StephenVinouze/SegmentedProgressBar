@@ -107,7 +107,7 @@ fun Sample() {
                     modifier = Modifier.padding(top = 20.dp),
                     title = "Angle: ${segmentAngle.toInt()}°",
                     value = segmentAngle,
-                    range = -80f..80f,
+                    range = -60f..60f,
                     onValueChanged = { segmentAngle = it },
                 )
 
