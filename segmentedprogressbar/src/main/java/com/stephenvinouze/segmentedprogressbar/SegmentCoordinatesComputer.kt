@@ -33,7 +33,14 @@ class SegmentCoordinatesComputer {
      * @param spacing The spacing between each segment
      * @param angle The angle between each segment
      */
-    fun segmentCoordinates(position: Int, segmentCount: Int, width: Float, height: Float, spacing: Float, angle: Float): SegmentCoordinates {
+    fun segmentCoordinates(
+        position: Int,
+        segmentCount: Int,
+        width: Float,
+        height: Float,
+        spacing: Float,
+        angle: Float
+    ): SegmentCoordinates {
         val segmentTangent = segmentTangent(height, angle)
         val segmentWidth = (width - (spacing + segmentTangent) * (segmentCount - 1)) / segmentCount
         val isLast = position == segmentCount - 1
@@ -74,7 +81,14 @@ class SegmentCoordinatesComputer {
      * @param spacing The spacing between each segment
      * @param angle The angle between each segment
      */
-    fun progressCoordinates(progress: Float, segmentCount: Int, width: Float, height: Float, spacing: Float, angle: Float): SegmentCoordinates {
+    fun progressCoordinates(
+        progress: Float,
+        segmentCount: Int,
+        width: Float,
+        height: Float,
+        spacing: Float,
+        angle: Float
+    ): SegmentCoordinates {
         val segmentTangent = segmentTangent(height, angle)
         val segmentWidth = (width - (spacing + segmentTangent) * (segmentCount - 1)) / segmentCount
         val spacingCount = maxOf(0f, progress - 1)
