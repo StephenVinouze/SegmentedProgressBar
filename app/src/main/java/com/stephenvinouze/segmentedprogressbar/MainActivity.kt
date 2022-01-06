@@ -3,6 +3,7 @@ package com.stephenvinouze.segmentedprogressbar
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -21,6 +22,7 @@ import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.ui.theme.SegmentedProgressBarTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -40,6 +42,34 @@ fun Sample() {
         var progressColor by remember { mutableStateOf(Color.Green) }
         var progressAlpha by remember { mutableStateOf(1f) }
         var progress by remember { mutableStateOf(0f) }
+        var breathEffectAnimationEnabled by remember { mutableStateOf(false) }
+
+        /**
+         * Example of custom animation with alpha breathing effect
+         * Infinite animation is started when option is enabled and when progress is reaching previous to last segment, otherwise removed from composition
+         * Using keyframes for higher customization. Animation is in four stages
+         * 1. First half, keep progressAlpha
+         * 2. From half to 75% duration, duck to 0.3% of progressAlpha
+         * 3. From 75% to completion, restore to progressAlpha
+         */
+        val animatedProgressAlpha = if (breathEffectAnimationEnabled && progress.compareTo(segmentCount - 1) == 0) {
+            val alphaAnimationDuration = 1800
+            val infiniteTransition = rememberInfiniteTransition()
+            infiniteTransition.animateFloat(
+                initialValue = progressAlpha,
+                targetValue = progressAlpha,
+                animationSpec = infiniteRepeatable(
+                    animation = keyframes {
+                        durationMillis = alphaAnimationDuration
+                        progressAlpha.at(alphaAnimationDuration / 2)
+                        (progressAlpha * 0.3f).at(3 * alphaAnimationDuration / 4)
+                    },
+                    repeatMode = RepeatMode.Restart,
+                ),
+            ).value
+        } else {
+            progressAlpha
+        }
 
         Surface(
             modifier = Modifier.fillMaxHeight(),
@@ -67,7 +97,7 @@ fun Sample() {
                         ),
                         progressColor = SegmentColor(
                             color = progressColor,
-                            alpha = progressAlpha,
+                            alpha = animatedProgressAlpha,
                         ),
                         onProgressChanged = {
                             println("on progress changed $it")
@@ -122,6 +152,13 @@ fun Sample() {
                     value = progressAlpha,
                     range = 0f..1f,
                     onValueChanged = { progressAlpha = it },
+                )
+
+                LabelledSwitch(
+                    modifier = Modifier.padding(top = 20.dp),
+                    title = "Enabled last segment alpha animation",
+                    checked = breathEffectAnimationEnabled,
+                    onCheckedChange = { breathEffectAnimationEnabled = it }
                 )
 
                 ColorPicker(
@@ -198,6 +235,29 @@ fun RangePicker(
             valueRange = range,
             onValueChange = onValueChanged,
             modifier = Modifier.weight(1f),
+        )
+    }
+}
+
+@Composable
+fun LabelledSwitch(
+    title: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier,
+        verticalAlignment = CenterVertically,
+    ) {
+        Text(
+            text = title,
+            modifier = Modifier.weight(1f),
+        )
+
+        Switch(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
         )
     }
 }

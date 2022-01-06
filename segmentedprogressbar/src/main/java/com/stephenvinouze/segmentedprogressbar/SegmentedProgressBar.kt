@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
+import kotlin.math.floor
 
 @Composable
 fun SegmentedProgressBar(
@@ -49,8 +50,19 @@ fun SegmentedProgressBar(
     }
 
     Canvas(
-        modifier = modifier.fillMaxWidth().clipToBounds(),
+        modifier = modifier
+            .fillMaxWidth()
+            .clipToBounds(),
         onDraw = {
+            val progressCoordinates = computer.progressCoordinates(
+                progress = animatedProgress.coerceIn(0f, segmentCount.toFloat()),
+                segmentCount = segmentCount,
+                width = size.width,
+                height = size.height,
+                spacing = spacingPx,
+                angle = angle
+            )
+
             (0 until segmentCount).forEach { position ->
                 val segmentCoordinates = computer.segmentCoordinates(
                     position = position,
@@ -60,20 +72,16 @@ fun SegmentedProgressBar(
                     spacing = spacingPx,
                     angle = angle
                 )
-                drawSegment(
-                    coordinates = segmentCoordinates,
-                    color = segmentColor
-                )
+
+                // Prevents drawing segment below progress to lighten drawing cycle and avoid bad alpha progress rendering
+                if (segmentCoordinates.topRightX.compareTo(progressCoordinates.topRightX) > 0) {
+                    drawSegment(
+                        coordinates = segmentCoordinates,
+                        color = segmentColor
+                    )
+                }
             }
 
-            val progressCoordinates = computer.progressCoordinates(
-                progress = animatedProgress.coerceIn(0f, segmentCount.toFloat()),
-                segmentCount = segmentCount,
-                width = size.width,
-                height = size.height,
-                spacing = spacingPx,
-                angle = angle
-            )
             drawSegment(
                 coordinates = progressCoordinates,
                 color = progressColor
@@ -227,6 +235,24 @@ fun ThreeSegmentedProgressBarWithThreeProgress() {
         ),
         progressColor = SegmentColor(
             color = Color.Red
+        )
+    )
+}
+
+@Preview(widthDp = 300, heightDp = 30)
+@Composable
+fun ThreeSegmentedProgressBarWithHiddenSegmentBehindProgress() {
+    SegmentedProgressBar(
+        segmentCount = 3,
+        progress = 2f,
+        spacing = 10.dp,
+        angle = 45f,
+        segmentColor = SegmentColor(
+            color = Color.White
+        ),
+        progressColor = SegmentColor(
+            color = Color.Red,
+            alpha = 0.3f,
         )
     )
 }
