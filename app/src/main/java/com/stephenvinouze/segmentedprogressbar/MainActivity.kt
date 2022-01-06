@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.github.dhaval2404.colorpicker.ColorPickerDialog
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
-import com.stephenvinouze.segmentedprogressbar.models.SegmentedProgressBarViewState
 import com.stephenvinouze.segmentedprogressbar.ui.theme.SegmentedProgressBarTheme
 
 class MainActivity : ComponentActivity() {
@@ -58,19 +57,17 @@ fun Sample() {
                         modifier = Modifier
                             .padding(top = 20.dp)
                             .height(30.dp),
-                        viewState = SegmentedProgressBarViewState(
-                            segmentCount = segmentCount.toInt(),
-                            spacing = segmentSpacing,
-                            angle = segmentAngle,
-                            progress = progress,
-                            segmentColor = SegmentColor(
-                                color = segmentColor,
-                                alpha = segmentAlpha,
-                            ),
-                            progressColor = SegmentColor(
-                                color = progressColor,
-                                alpha = progressAlpha,
-                            ),
+                        segmentCount = segmentCount.toInt(),
+                        spacing = segmentSpacing,
+                        angle = segmentAngle,
+                        progress = progress,
+                        segmentColor = SegmentColor(
+                            color = segmentColor,
+                            alpha = segmentAlpha,
+                        ),
+                        progressColor = SegmentColor(
+                            color = progressColor,
+                            alpha = progressAlpha,
                         ),
                         onProgressChanged = {
                             println("on progress changed $it")
