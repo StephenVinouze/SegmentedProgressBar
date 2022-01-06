@@ -8,17 +8,25 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.Center
+import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
+import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.dhaval2404.colorpicker.ColorPickerDialog
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
+import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
+import com.stephenvinouze.segmentedprogressbar.ui.theme.Green200
 import com.stephenvinouze.segmentedprogressbar.ui.theme.SegmentedProgressBarTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,10 +47,16 @@ fun Sample() {
         var segmentAngle by remember { mutableStateOf(0f) }
         var segmentColor by remember { mutableStateOf(Color.Gray) }
         var segmentAlpha by remember { mutableStateOf(1f) }
-        var progressColor by remember { mutableStateOf(Color.Green) }
+        var progressColor by remember { mutableStateOf(Green200) }
         var progressAlpha by remember { mutableStateOf(1f) }
         var progress by remember { mutableStateOf(0f) }
-        var breathEffectAnimationEnabled by remember { mutableStateOf(false) }
+        var enableBreathEffectAnimation by remember { mutableStateOf(false) }
+        var enableKamehamehaAnimation by remember { mutableStateOf(true) }
+        var offsetKamehameha by remember { mutableStateOf(0.dp) }
+        var isProgressing by remember { mutableStateOf(false) }
+
+        val kamehamehaSize = 38.dp
+        val density = LocalDensity.current
 
         /**
          * Example of custom animation with alpha breathing effect
@@ -52,7 +66,7 @@ fun Sample() {
          * 2. From half to 75% duration, duck to 0.3% of progressAlpha
          * 3. From 75% to completion, restore to progressAlpha
          */
-        val animatedProgressAlpha = if (breathEffectAnimationEnabled && progress.compareTo(segmentCount - 1) == 0) {
+        val animatedProgressAlpha = if (enableBreathEffectAnimation && progress.compareTo(segmentCount - 1) == 0) {
             val alphaAnimationDuration = 1800
             val infiniteTransition = rememberInfiniteTransition()
             infiniteTransition.animateFloat(
@@ -80,13 +94,13 @@ fun Sample() {
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Box(
-                    modifier = Modifier.weight(1f),
-                    contentAlignment = Center,
+                    modifier = Modifier
+                        .weight(1f)
+                        .clipToBounds(),
+                    contentAlignment = CenterStart,
                 ) {
                     SegmentedProgressBar(
-                        modifier = Modifier
-                            .padding(top = 20.dp)
-                            .height(30.dp),
+                        modifier = Modifier.height(16.dp),
                         segmentCount = segmentCount.toInt(),
                         spacing = segmentSpacing,
                         angle = segmentAngle,
@@ -99,13 +113,29 @@ fun Sample() {
                             color = progressColor,
                             alpha = animatedProgressAlpha,
                         ),
-                        onProgressChanged = {
-                            println("on progress changed $it")
+                        progressAnimationSpec = tween(
+                            durationMillis = 2000,
+                            easing = LinearEasing,
+                        ),
+                        onProgressChanged = { _: Float, progressCoordinates: SegmentCoordinates ->
+                            isProgressing = true
+                            offsetKamehameha = density.run { progressCoordinates.topRightX.toDp() } - kamehamehaSize
                         },
                         onProgressFinished = {
-                            println("on progress finished $it")
+                            isProgressing = false
                         }
                     )
+
+                    if (enableKamehamehaAnimation && isProgressing) {
+                        val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_kamehameha))
+                        LottieAnimation(
+                            modifier = Modifier
+                                .size(kamehamehaSize)
+                                .absoluteOffset(x = offsetKamehameha),
+                            composition = composition,
+                            iterations = LottieConstants.IterateForever,
+                        )
+                    }
                 }
 
                 Stepper(
@@ -157,8 +187,15 @@ fun Sample() {
                 LabelledSwitch(
                     modifier = Modifier.padding(top = 20.dp),
                     title = "Enabled last segment alpha animation",
-                    checked = breathEffectAnimationEnabled,
-                    onCheckedChange = { breathEffectAnimationEnabled = it }
+                    checked = enableBreathEffectAnimation,
+                    onCheckedChange = { enableBreathEffectAnimation = it }
+                )
+
+                LabelledSwitch(
+                    modifier = Modifier.padding(top = 20.dp),
+                    title = "Enabled kamehameha animation",
+                    checked = enableKamehamehaAnimation,
+                    onCheckedChange = { enableKamehamehaAnimation = it }
                 )
 
                 ColorPicker(

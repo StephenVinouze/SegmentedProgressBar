@@ -54,6 +54,7 @@ dependencies {
     implementation 'androidx.activity:activity-compose:1.4.0'
 
     implementation 'com.github.Dhaval2404:ColorPicker:2.3'
+    implementation "com.airbnb.android:lottie-compose:4.2.2"
 
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 }

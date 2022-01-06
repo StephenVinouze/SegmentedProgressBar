@@ -7,9 +7,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Color
@@ -21,7 +19,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
-import kotlin.math.floor
 
 @Composable
 fun SegmentedProgressBar(
@@ -33,10 +30,11 @@ fun SegmentedProgressBar(
     segmentColor: SegmentColor = SegmentColor(),
     progressColor: SegmentColor = SegmentColor(),
     progressAnimationSpec: AnimationSpec<Float> = tween(),
-    onProgressChanged: ((Float) -> Unit)? = null,
-    onProgressFinished: ((Float) -> Unit)? = null,
+    onProgressChanged: ((progress: Float, progressCoordinates: SegmentCoordinates) -> Unit)? = null,
+    onProgressFinished: ((progress: Float) -> Unit)? = null,
 ) {
     val computer = remember { SegmentCoordinatesComputer() }
+    var progressCoordinates by remember { mutableStateOf(SegmentCoordinates(0f, 0f, 0f, 0f)) }
     val spacingPx = LocalDensity.current.run { spacing.toPx() }
 
     val animatedProgress by animateFloatAsState(
@@ -45,8 +43,8 @@ fun SegmentedProgressBar(
         finishedListener = onProgressFinished,
     )
 
-    if (animatedProgress.compareTo(progress) == 0) {
-        onProgressChanged?.invoke(animatedProgress)
+    if (animatedProgress.compareTo(progress) != 0) {
+        onProgressChanged?.invoke(animatedProgress, progressCoordinates)
     }
 
     Canvas(
@@ -54,7 +52,7 @@ fun SegmentedProgressBar(
             .fillMaxWidth()
             .clipToBounds(),
         onDraw = {
-            val progressCoordinates = computer.progressCoordinates(
+            progressCoordinates = computer.progressCoordinates(
                 progress = animatedProgress.coerceIn(0f, segmentCount.toFloat()),
                 segmentCount = segmentCount,
                 width = size.width,
