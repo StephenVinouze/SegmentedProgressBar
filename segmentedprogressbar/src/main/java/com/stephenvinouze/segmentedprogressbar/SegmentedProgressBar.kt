@@ -20,15 +20,42 @@ import androidx.compose.ui.unit.dp
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
 
+/**
+ * Progress bar split into several segments.
+ * Comes with several attributes to customize appearance. Some are constrained within ranges to prevent erratic display behaviors (such as angle, see below)
+ *
+ * Note that [drawSegmentsBehindProgress] is to be used with caution. Especially when applying an alpha on the progress bar. If you don't, we recommend disabling it for performance reasons.
+ * Enabling it is useful when you'd like to perform a fade animation on the progress segment. To improve the rendering, we don't want to see the segments behind the progress (that will become visible during the fade animation otherwise).
+ * If you need to apply an opacity on the progress bar, mind that:
+ * - enabling it will keep drawing the segments behind the progress. Since you apply an opacity on the progress, you'll see the spacing between segments behind the progress segment.
+ * - disabling it will keep drawing the segment being progressed during the animation (that's expected). Once the animation completes, the segment will disappear. Applying an opacity on the progress segment will make this behavior visible to the user, giving a bad user experience since all previous segments are already hidden.
+ *
+ * To bypass this issue, it's best to change its value outside the animation recomposition. You can make use of the [onProgressFinished] callback for instance. See breath effect animation in the Sample.
+ *
+ * Bevels are expressed in degrees for convenience and internally converted in Radians. Angle can be negative, but is contained between -60° and 60° otherwise the bevel breaks segments by nearing an horizontal plane.
+ *
+ * @param segmentCount The number of segments displayed on the progress bar
+ * @param modifier [Modifier] to apply to this layout node
+ * @param progress The progress value to display the progress segment
+ * @param spacing The spacing between segments
+ * @param angle The bevel for each segment
+ * @param segmentColor [SegmentColor] for each segment
+ * @param progressColor [SegmentColor] for the progress segment
+ * @param drawSegmentsBehindProgress The flag to enable drawing segments behind progress knowing it will cover the segments
+ * @param progressAnimationSpec [AnimationSpec] for the progress animation
+ * @param onProgressChanged The callback triggered when a progression animation occurs. Gives the current progression and the current progress coordinates while animating
+ * @param onProgressFinished The callback triggered when a progression animation finishes.
+ */
 @Composable
 fun SegmentedProgressBar(
     @IntRange(from = 1) segmentCount: Int,
     modifier: Modifier = Modifier,
     @FloatRange(from = 0.0) progress: Float = 0f,
     @FloatRange(from = 0.0) spacing: Dp = 0.dp,
-    @FloatRange(from = -60.0, to = 60.0) angle: Float = 0f, // Beyond 60° the bevel breaks segments by nearing horizontal plane
+    @FloatRange(from = -60.0, to = 60.0) angle: Float = 0f,
     segmentColor: SegmentColor = SegmentColor(),
     progressColor: SegmentColor = SegmentColor(),
+    drawSegmentsBehindProgress: Boolean = false,
     progressAnimationSpec: AnimationSpec<Float> = tween(),
     onProgressChanged: ((progress: Float, progressCoordinates: SegmentCoordinates) -> Unit)? = null,
     onProgressFinished: ((progress: Float) -> Unit)? = null,
@@ -72,7 +99,7 @@ fun SegmentedProgressBar(
                 )
 
                 // Prevents drawing segment below progress to lighten drawing cycle and avoid bad alpha progress rendering
-                if (segmentCoordinates.topRightX.compareTo(progressCoordinates.topRightX) > 0) {
+                if (drawSegmentsBehindProgress || segmentCoordinates.topRightX.compareTo(progressCoordinates.topRightX) > 0) {
                     drawSegment(
                         coordinates = segmentCoordinates,
                         color = segmentColor

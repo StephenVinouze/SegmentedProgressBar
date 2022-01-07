@@ -3,34 +3,8 @@ package com.stephenvinouze.segmentedprogressbar
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
 import kotlin.math.*
 
-class SegmentCoordinatesComputer {
+internal class SegmentCoordinatesComputer {
 
-    /**
-     * Compute segment coordinates depending on several parameters
-     *
-     * Will result in X coordinates of topLeft, topRight, bottomLeft and bottomRight per segment
-     *
-     *
-     *             segmentTangent        spacing
-     *                  <->                <->
-     *    -----------------   -------------   ------------   ^
-     *   |                /               /               |  |  height
-     *   |               /               /                |  |
-     *    --------------   -------------   ---------------   ^
-     *    <------------>
-     *     segmentWidth
-     *
-     *    <----------------------------------------------->
-     *                          width
-     *
-     *
-     * @param position The segment position in the progress bar
-     * @param segmentCount The segment count in the progress bar
-     * @param width The progress bar's width
-     * @param height The progress bar's height
-     * @param spacing The spacing between each segment
-     * @param angle The angle between each segment
-     */
     fun segmentCoordinates(
         position: Int,
         segmentCount: Int,
@@ -52,34 +26,6 @@ class SegmentCoordinatesComputer {
         return SegmentCoordinates(topLeft, topRight, bottomLeft, bottomRight)
     }
 
-    /**
-     * Compute progress coordinates depending on several parameters
-     *
-     * Will result in X coordinates of topLeft, topRight, bottomLeft and bottomRight for progress segment
-     *
-     *
-     *                             segmentTangent
-     *                                  <->
-     *                                        segmentWidth
-     *                                        <----------->
-     *    ---------------------------------   ------------   ^
-     *   |                                /               |  |  height
-     *   |                               /                |  |
-     *    ------------------------------   ---------------   ^
-     *                                  <->
-     *                                spacing
-     *
-     *    <----------------------------------------------->
-     *                          width
-     *
-     *
-     * @param progress The current progress in the progress bar (interpolated by animatedFloatAsState)
-     * @param segmentCount The segment count in the progress bar
-     * @param width The progress bar's width
-     * @param height The progress bar's height
-     * @param spacing The spacing between each segment
-     * @param angle The angle between each segment
-     */
     fun progressCoordinates(
         progress: Float,
         segmentCount: Int,
