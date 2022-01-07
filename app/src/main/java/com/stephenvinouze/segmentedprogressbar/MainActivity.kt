@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.*
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -51,10 +50,22 @@ enum class ProgressState {
 @Composable
 fun Sample() {
     SegmentedProgressBarTheme {
-        val kamehamehaSize = 38.dp
         val density = LocalDensity.current
+
+        // Animation properties
         val progressAnimationDuration = 1000
         val breathEffectAnimationDuration = 1800
+        val kamehamehaSize = 38.dp
+        var enableBreathEffectAnimation by remember { mutableStateOf(false) }
+        var enableKamehamehaAnimation by remember { mutableStateOf(false) }
+
+        // Toggles to disable some properties for custom animations for rendering reasons
+        val enableProgressAlpha by remember {
+            derivedStateOf { !enableBreathEffectAnimation }
+        }
+        val enableAngle by remember {
+            derivedStateOf { !enableKamehamehaAnimation }
+        }
 
         // Segment progress bar properties
         var segmentCount by remember { mutableStateOf(3f) }
@@ -65,12 +76,10 @@ fun Sample() {
         var progressColor by remember { mutableStateOf(Green200) }
         var progressAlpha by remember { mutableStateOf(1f) }
         var progress by remember { mutableStateOf(0f) }
-        var drawBehindProgress by remember { mutableStateOf(true) }
-
-        // Animation properties
-        var enableBreathEffectAnimation by remember { mutableStateOf(false) }
-        var enableKamehamehaAnimation by remember { mutableStateOf(true) }
         var progressState by remember { mutableStateOf(ProgressState.Idle) }
+        val drawBehindProgress by remember {
+            derivedStateOf { !enableBreathEffectAnimation || progressState == ProgressState.Progressing }
+        }
 
         // Breath effect animation properties
         /**
@@ -100,14 +109,12 @@ fun Sample() {
         }
 
         // Kamehameha animation properties
-        var showKamehameha by remember { mutableStateOf(false) }
         var offsetKamehameha by remember { mutableStateOf(0f) }
-        var previousOffsetKamehameha by remember { mutableStateOf(0f) }
-        val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_kamehameha))
-
-        // Toggles to disable some properties for custom animations for rendering reasons
-        var enableProgressAlpha by remember { mutableStateOf(true) }
-        var enableAngle by remember { mutableStateOf(true) }
+        val showKamehameha by remember {
+            derivedStateOf {
+                enableKamehamehaAnimation && progressState == ProgressState.Progressing
+            }
+        }
 
         Surface(
             modifier = Modifier.fillMaxHeight(),
@@ -120,8 +127,7 @@ fun Sample() {
                 Box(
                     modifier = Modifier
                         .weight(1f)
-                        .clipToBounds()
-                        .background(Color.Cyan),
+                        .clipToBounds(),
                     contentAlignment = CenterStart,
                 ) {
 
@@ -146,21 +152,17 @@ fun Sample() {
                         ),
                         onProgressChanged = { _: Float, progressCoordinates: SegmentCoordinates ->
                             progressState = ProgressState.Progressing
-                            drawBehindProgress = true
                             offsetKamehameha = progressCoordinates.topRightX - density.run { kamehamehaSize.toPx() }
-                            showKamehameha = enableKamehamehaAnimation && offsetKamehameha > previousOffsetKamehameha
                         },
                         onProgressFinished = {
                             progressState = ProgressState.Idle
-                            drawBehindProgress = !enableBreathEffectAnimation
-                            previousOffsetKamehameha = offsetKamehameha
-                            showKamehameha = false
                         }
                     )
 
                     androidx.compose.animation.AnimatedVisibility(
                         visible = showKamehameha,
                     ) {
+                        val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_kamehameha))
                         LottieAnimation(
                             modifier = Modifier
                                 .size(kamehamehaSize)
@@ -174,15 +176,21 @@ fun Sample() {
                 Stepper(
                     modifier = Modifier.padding(top = 20.dp),
                     label = "Number of segments: ${segmentCount.toInt()}",
-                    onMinus = { if (segmentCount > 1) segmentCount-- },
+                    onMinus = {
+                        if (segmentCount > 1 && segmentCount > progress) segmentCount-- // Prevents having progress above segment count and less than one segment
+                    },
                     onPlus = { segmentCount++ },
                 )
 
                 Stepper(
                     modifier = Modifier.padding(top = 20.dp),
                     label = "Progress: ${progress.toInt()}",
-                    onMinus = { if (progress > 0) progress-- },
-                    onPlus = { if (progress < segmentCount) progress++ },
+                    onMinus = {
+                        if (progress > 0) progress-- // Prevents going below progress == 0
+                    },
+                    onPlus = {
+                        if (progress < segmentCount) progress++ // Prevents having progress above segment count
+                    },
                 )
 
                 RangePicker(
@@ -225,7 +233,6 @@ fun Sample() {
                     checked = enableBreathEffectAnimation,
                     onCheckedChange = {
                         enableBreathEffectAnimation = it
-                        enableProgressAlpha = !it
                         progressAlpha = if (it) 1f else progressAlpha
                     }
                 )
@@ -236,7 +243,6 @@ fun Sample() {
                     checked = enableKamehamehaAnimation,
                     onCheckedChange = {
                         enableKamehamehaAnimation = it
-                        enableAngle = !it
                         segmentAngle = if (it) 25f else segmentAngle
                     }
                 )
