@@ -9,55 +9,37 @@ Beautiful progress bar split into several segments. Highly customizable. Fully w
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
 </p>
 
-![spb_reduced](https://user-images.githubusercontent.com/14751184/149196357-727b8fc4-b8ff-4735-8c0e-da3a60f973b5.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/14751184/149196357-727b8fc4-b8ff-4735-8c0e-da3a60f973b5.gif" />
+</p>
 
 ## Why this library?
 Have you ever needed to display a progression showing several completion steps? The Android SDK offers a ProgressBar component that comes with a single segment. When you want to give a compelling interface showing the actual progression of your users, it looks friendlier – and prettier! – to show a segmented progression rather than a linear progression partially filled.
 
 This component allows you to split your progression into distinct segments. It goes even further by letting you customize its display with attributes such as spacing between segments as well as a bevel to embellish your design.
 
+The sample speaks for itself
+
 ## Including in your project
 Because the library is written with Jetpack Compose, it requires your project to use Kotlin to inflate this component. You can safely insert it in a non-Compose project with a `ComposeView` as long as it uses Kotlin.
 
-Regardless, your project will need to have Compose enabled and configured. Ensure your `build.gradle` file where you're including this library has the following:
-
-```groovy
-android {
-  kotlinOptions {
-    useIR = true
-  }
-  buildFeatures {
-      compose true
-  }
-  composeOptions {
-    kotlinCompilerExtensionVersion '1.0.5' // Latest stable version as I'm writing
-    kotlinCompilerVersion '1.5.31' // Latest stable version as I'm writing
-  }
-}
-
-dependencies {
-    implementation "com.github.StephenVinouze:SegmentedProgressBar:{latest_version}"
-
-    // Dependencies to invoke this library with Compose
-    implementation "androidx.compose.ui:ui:1.0.5"
-    implementation "androidx.compose.material:material:1.0.5"
-    implementation "androidx.compose.ui:ui-tooling-preview:1.0.5"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
-    implementation 'androidx.activity:activity-compose:1.4.0'
-
-    debugImplementation "androidx.compose.ui:ui-tooling:1.0.5"
-}
-
-```
-
-And add Jitpack (where the library is hosted) in your root `build.gradle` file:
+Add Jitpack (where the library is hosted) in your root `build.gradle` file:
 
 ```groovy
 allprojects {
   repositories {
-	   maven { url "https://jitpack.io" }
+	  maven { url "https://jitpack.io" }
   }
 }
+```
+
+Then in your `build.gradle` module file where you want to use this library:
+
+```groovy
+dependencies {
+  implementation "com.github.StephenVinouze:SegmentedProgressBar:{latest_version}"
+}
+
 ```
 
 ## How to use
