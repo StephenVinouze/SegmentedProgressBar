@@ -9,6 +9,8 @@ Beautiful progress bar split into several segments. Highly customizable. Fully w
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
 </p>
 
+![spb_reduced](https://user-images.githubusercontent.com/14751184/149196357-727b8fc4-b8ff-4735-8c0e-da3a60f973b5.gif)
+
 ## Why this library?
 Have you ever needed to display a progression showing several completion steps? The Android SDK offers a ProgressBar component that comes with a single segment. When you want to give a compelling interface showing the actual progression of your users, it looks friendlier – and prettier! – to show a segmented progression rather than a linear progression partially filled.
 
