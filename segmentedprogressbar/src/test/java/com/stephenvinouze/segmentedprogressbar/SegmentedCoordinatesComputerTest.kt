@@ -5,6 +5,7 @@
 package com.stephenvinouze.segmentedprogressbar
 
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
+import com.stephenvinouze.segmentedprogressbar.SegmentCoordinatesComputer
 import org.junit.Assert
 import org.junit.Test
 
