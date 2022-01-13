@@ -20,6 +20,11 @@ This component allows you to split your progression into distinct segments. It g
 
 The sample speaks for itself
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/14751184/149315010-4e406182-41b0-4fb8-8ff3-46489a4c4584.gif" />
+</p>
+
+
 ## Including in your project
 Because the library is written with Jetpack Compose, it requires your project to use Kotlin to inflate this component. You can safely insert it in a non-Compose project with a `ComposeView` as long as it uses Kotlin.
 
@@ -113,6 +118,11 @@ SegmentedProgressBar(
 ```
 
 I encourage you to play around with the sample to get a better look and feel. It show cases advanced usage with custom animation based on the progression callbacks that aren't part of the library itself.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/14751184/149315068-15c06eb8-f72b-4085-b888-3d59387cedd7.gif" width="33%" />
+  <img src="https://user-images.githubusercontent.com/14751184/149315062-5ff6b53e-b416-43b9-b8f1-f30e5d11e262.gif" width="33%" />
+</p>
 
 # License
 ```xml
