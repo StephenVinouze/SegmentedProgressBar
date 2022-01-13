@@ -1,4 +1,4 @@
-package com.stephenvinouze.segmentedprogressbar
+package com.stephenvinouze.sample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -28,8 +28,9 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.dhaval2404.colorpicker.ColorPickerDialog
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
-import com.stephenvinouze.segmentedprogressbar.ui.theme.Green200
-import com.stephenvinouze.segmentedprogressbar.ui.theme.SegmentedProgressBarTheme
+import com.stephenvinouze.sample.ui.theme.Green200
+import com.stephenvinouze.sample.ui.theme.SegmentedProgressBarTheme
+import com.stephenvinouze.segmentedprogressbar.SegmentedProgressBar
 
 @ExperimentalAnimationApi
 class MainActivity : ComponentActivity() {

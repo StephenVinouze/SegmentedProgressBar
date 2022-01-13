@@ -1,4 +1,4 @@
-package com.stephenvinouze.segmentedprogressbar.ui.theme
+package com.stephenvinouze.sample.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
