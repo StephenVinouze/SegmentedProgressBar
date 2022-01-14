@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 android {
@@ -38,4 +39,18 @@ dependencies {
     implementation 'androidx.activity:activity-compose:1.4.0'
     testImplementation 'junit:junit:4.13.2'
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.stephenvinouze'
+                artifactId = 'segmented-progressbar'
+                version = '1.0.0'
+            }
+        }
+    }
 }
