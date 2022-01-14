@@ -10,9 +10,15 @@ Beautiful progress bar split into several segments. Highly customizable. Fully w
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
 </p>
 
+<br/>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/14751184/149196357-727b8fc4-b8ff-4735-8c0e-da3a60f973b5.gif" />
+  <img src="https://user-images.githubusercontent.com/14751184/149517865-1cde217c-d6e1-4d53-a415-f029a8492728.gif" />
 </p>
+<br/>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/14751184/149517870-f3eb519c-ddff-4924-9a9b-511c87b23f4f.gif" />
+</p>
+
 
 ## Why this library?
 Have you ever needed to display a progression showing several completion steps? The Android SDK offers a ProgressBar component that comes with a single segment. When you want to give a compelling interface showing the actual progression of your users, it looks friendlier – and prettier! – to show a segmented progression rather than a linear progression partially filled.
@@ -34,7 +40,7 @@ Add Jitpack (where the library is hosted) in your root `build.gradle` file:
 ```groovy
 allprojects {
   repositories {
-	  maven { url "https://jitpack.io" }
+    maven { url "https://jitpack.io" }
   }
 }
 ```
@@ -43,7 +49,7 @@ Then in your `build.gradle` module file where you want to use this library:
 
 ```groovy
 dependencies {
-  implementation "com.github.StephenVinouze:SegmentedProgressBar:{latest_version}"
+  implementation "com.stephenvinouze:SegmentedProgressBar:{latest_version}"
 }
 
 ```
@@ -119,11 +125,6 @@ SegmentedProgressBar(
 ```
 
 I encourage you to play around with the sample to get a better look and feel. It show cases advanced usage with custom animation based on the progression callbacks that aren't part of the library itself.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/14751184/149315068-15c06eb8-f72b-4085-b888-3d59387cedd7.gif" width="33%" />
-  <img src="https://user-images.githubusercontent.com/14751184/149315062-5ff6b53e-b416-43b9-b8f1-f30e5d11e262.gif" width="33%" />
-</p>
 
 # License
 ```xml
