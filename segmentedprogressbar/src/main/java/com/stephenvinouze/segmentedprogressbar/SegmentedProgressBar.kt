@@ -7,6 +7,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.progressSemantics
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
@@ -74,13 +75,19 @@ fun SegmentedProgressBar(
         onProgressChanged?.invoke(animatedProgress, progressCoordinates)
     }
 
+    val progressRange = 0f..segmentCount.toFloat()
+
     Canvas(
         modifier = modifier
+            .progressSemantics(
+                value = progress,
+                valueRange = progressRange,
+            )
             .fillMaxWidth()
             .clipToBounds(),
         onDraw = {
             progressCoordinates = computer.progressCoordinates(
-                progress = animatedProgress.coerceIn(0f, segmentCount.toFloat()),
+                progress = animatedProgress.coerceIn(progressRange),
                 segmentCount = segmentCount,
                 width = size.width,
                 height = size.height,
