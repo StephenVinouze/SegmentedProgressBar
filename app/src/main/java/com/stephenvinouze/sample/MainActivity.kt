@@ -72,10 +72,8 @@ fun Sample() {
         var segmentCount by remember { mutableStateOf(3f) }
         var segmentSpacing by remember { mutableStateOf(10.dp) }
         var segmentAngle by remember { mutableStateOf(0f) }
-        var segmentColor by remember { mutableStateOf(Color.Gray) }
-        var segmentAlpha by remember { mutableStateOf(1f) }
-        var progressColor by remember { mutableStateOf(Green200) }
-        var progressAlpha by remember { mutableStateOf(1f) }
+        var segmentColor by remember { mutableStateOf(SegmentColor(Color.Gray, 1f)) }
+        var progressColor by remember { mutableStateOf(SegmentColor(Green200, 1f)) }
         var progress by remember { mutableStateOf(0f) }
         var progressState by remember { mutableStateOf(ProgressState.Idle) }
         val drawBehindProgress by remember {
@@ -94,19 +92,19 @@ fun Sample() {
         val animatedProgressAlpha = if (enableBreathEffectAnimation && progressState == ProgressState.Idle && progress.compareTo(segmentCount - 1) == 0) {
             val infiniteTransition = rememberInfiniteTransition()
             infiniteTransition.animateFloat(
-                initialValue = progressAlpha,
-                targetValue = progressAlpha,
+                initialValue = progressColor.alpha,
+                targetValue = progressColor.alpha,
                 animationSpec = infiniteRepeatable(
                     animation = keyframes {
                         durationMillis = breathEffectAnimationDuration
-                        progressAlpha.at(breathEffectAnimationDuration / 2)
-                        (progressAlpha * 0.3f).at(3 * breathEffectAnimationDuration / 4)
+                        progressColor.alpha.at(breathEffectAnimationDuration / 2)
+                        (progressColor.alpha * 0.3f).at(3 * breathEffectAnimationDuration / 4)
                     },
                     repeatMode = RepeatMode.Restart,
                 ),
             ).value
         } else {
-            progressAlpha
+            progressColor.alpha
         }
 
         // Kamehameha animation properties
@@ -139,11 +137,11 @@ fun Sample() {
                         angle = segmentAngle,
                         progress = progress,
                         segmentColor = SegmentColor(
-                            color = segmentColor,
-                            alpha = segmentAlpha,
+                            color = segmentColor.color,
+                            alpha = segmentColor.alpha,
                         ),
                         progressColor = SegmentColor(
-                            color = progressColor,
+                            color = progressColor.color,
                             alpha = animatedProgressAlpha,
                         ),
                         drawSegmentsBehindProgress = drawBehindProgress,
@@ -174,100 +172,144 @@ fun Sample() {
                     }
                 }
 
-                Stepper(
+                Configurator(
+                    segmentCount = segmentCount,
+                    segmentSpacing = segmentSpacing,
+                    segmentAngle = segmentAngle,
+                    progress = progress,
+                    segmentColor = segmentColor,
+                    progressColor = progressColor,
+                    enableAngle = enableAngle,
+                    enableProgressAlpha = enableProgressAlpha,
+                    enableBreathEffectAnimation = enableBreathEffectAnimation,
+                    enableKamehamehaAnimation = enableKamehamehaAnimation,
+                    onSegmentCountChange = { segmentCount = it },
+                    onProgressChange = { progress = it },
+                    onSpacingChange = { segmentSpacing = it },
+                    onAngleChange = { segmentAngle = it },
+                    onSegmentColorChange = { segmentColor = it },
+                    onProgressColorChange = { progressColor = it },
+                    onBreathEffectAnimationToggle = { enableBreathEffectAnimation = it },
+                    onKamehamehaAnimationToggle = { enableKamehamehaAnimation = it },
                     modifier = Modifier.padding(top = 20.dp),
-                    label = "Number of segments: ${segmentCount.toInt()}",
-                    onMinus = {
-                        if (segmentCount > 1 && segmentCount > progress) segmentCount-- // Prevents having progress above segment count and less than one segment
-                    },
-                    onPlus = { segmentCount++ },
-                )
-
-                Stepper(
-                    modifier = Modifier.padding(top = 20.dp),
-                    label = "Progress: ${progress.toInt()}",
-                    onMinus = {
-                        if (progress > 0) progress-- // Prevents going below progress == 0
-                    },
-                    onPlus = {
-                        if (progress < segmentCount) progress++ // Prevents having progress above segment count
-                    },
-                )
-
-                RangePicker(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Spacing: ${segmentSpacing.value}",
-                    value = segmentSpacing.value,
-                    range = 0f..100f,
-                    onValueChanged = { segmentSpacing = Dp(it) },
-                )
-
-                RangePicker(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Angle: ${segmentAngle.toInt()}°",
-                    value = segmentAngle,
-                    range = -60f..60f,
-                    onValueChanged = { segmentAngle = it },
-                    enabled = enableAngle,
-                )
-
-                RangePicker(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Segment alpha: $segmentAlpha",
-                    value = segmentAlpha,
-                    range = 0f..1f,
-                    onValueChanged = { segmentAlpha = it },
-                )
-
-                RangePicker(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Progress alpha: $progressAlpha",
-                    value = progressAlpha,
-                    range = 0f..1f,
-                    onValueChanged = { progressAlpha = it },
-                    enabled = enableProgressAlpha,
-                )
-
-                LabelledSwitch(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Enabled last segment alpha animation",
-                    checked = enableBreathEffectAnimation,
-                    onCheckedChange = {
-                        enableBreathEffectAnimation = it
-                        progressAlpha = if (it) 1f else progressAlpha
-                    }
-                )
-
-                LabelledSwitch(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Enabled kamehameha animation",
-                    checked = enableKamehamehaAnimation,
-                    onCheckedChange = {
-                        enableKamehamehaAnimation = it
-                        segmentAngle = if (it) 25f else segmentAngle
-                    }
-                )
-
-                ColorPicker(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Pick segment color",
-                    color = segmentColor,
-                    onColorPicked = {
-                        segmentColor = it
-                    }
-                )
-
-                ColorPicker(
-                    modifier = Modifier.padding(top = 20.dp),
-                    title = "Pick progress color",
-                    color = progressColor,
-                    onColorPicked = {
-                        progressColor = it
-                    }
                 )
             }
         }
     }
+}
+
+@Composable
+fun Configurator(
+    segmentCount: Float, // TODO: Wrap into VM with State?
+    segmentSpacing: Dp,
+    segmentAngle: Float,
+    progress: Float,
+    segmentColor: SegmentColor,
+    progressColor: SegmentColor,
+    enableAngle: Boolean,
+    enableProgressAlpha: Boolean,
+    enableBreathEffectAnimation: Boolean,
+    enableKamehamehaAnimation: Boolean,
+    onSegmentCountChange: (Float) -> Unit,
+    onProgressChange: (Float) -> Unit,
+    onSpacingChange: (Dp) -> Unit,
+    onAngleChange: (Float) -> Unit,
+    onSegmentColorChange: (SegmentColor) -> Unit,
+    onProgressColorChange: (SegmentColor) -> Unit,
+    onBreathEffectAnimationToggle: (Boolean) -> Unit,
+    onKamehamehaAnimationToggle: (Boolean) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Stepper(
+        modifier = modifier,
+        label = "Number of segments: ${segmentCount.toInt()}",
+        onMinus = {
+            // Prevents having progress above segment count and less than one segment
+            if (segmentCount > 1 && segmentCount > progress) onSegmentCountChange(segmentCount - 1)
+        },
+        onPlus = { onSegmentCountChange(segmentCount + 1) },
+    )
+
+    Stepper(
+        modifier = Modifier.padding(top = 20.dp),
+        label = "Progress: ${progress.toInt()}",
+        onMinus = {
+            // Prevents going below progress == 0
+            if (progress > 0) onProgressChange(progress - 1)
+        },
+        onPlus = {
+            // Prevents having progress above segment count
+            if (progress < segmentCount) onProgressChange(progress + 1)
+        },
+    )
+
+    RangePicker(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Spacing: ${segmentSpacing.value}",
+        value = segmentSpacing.value,
+        range = 0f..100f,
+        onValueChanged = { onSpacingChange(Dp(it)) },
+    )
+
+    RangePicker(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Angle: ${segmentAngle.toInt()}°",
+        value = segmentAngle,
+        range = -60f..60f,
+        onValueChanged = { onAngleChange(it) },
+        enabled = enableAngle,
+    )
+
+    RangePicker(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Segment alpha: ${segmentColor.alpha}",
+        value = segmentColor.alpha,
+        range = 0f..1f,
+        onValueChanged = { onSegmentColorChange(segmentColor.copy(alpha = it)) },
+    )
+
+    RangePicker(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Progress alpha: ${progressColor.alpha}",
+        value = progressColor.alpha,
+        range = 0f..1f,
+        onValueChanged = { onProgressColorChange(progressColor.copy(alpha = it)) },
+        enabled = enableProgressAlpha,
+    )
+
+    LabelledSwitch(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Enabled last segment alpha animation",
+        checked = enableBreathEffectAnimation,
+        onCheckedChange = {
+            onBreathEffectAnimationToggle(it)
+            if (it) onProgressColorChange(progressColor.copy(alpha = 1f))
+        }
+    )
+
+    LabelledSwitch(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Enabled kamehameha animation",
+        checked = enableKamehamehaAnimation,
+        onCheckedChange = {
+            onKamehamehaAnimationToggle(it)
+            if (it) onAngleChange(25f)
+        }
+    )
+
+    ColorPicker(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Pick segment color",
+        color = segmentColor.color,
+        onColorPicked = { onSegmentColorChange(segmentColor.copy(color = it)) }
+    )
+
+    ColorPicker(
+        modifier = Modifier.padding(top = 20.dp),
+        title = "Pick progress color",
+        color = progressColor.color,
+        onColorPicked = { onProgressColorChange(progressColor.copy(color = it)) }
+    )
 }
 
 @Composable
