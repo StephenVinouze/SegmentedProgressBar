@@ -32,175 +32,182 @@ import com.stephenvinouze.sample.ui.theme.Green200
 import com.stephenvinouze.sample.ui.theme.SegmentedProgressBarTheme
 import com.stephenvinouze.segmentedprogressbar.SegmentedProgressBar
 
+private val kamehamehaSize = 38.dp
+
 @ExperimentalAnimationApi
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Sample()
-        }
-    }
-}
+            SegmentedProgressBarTheme {
+                var offsetKamehameha by remember { mutableStateOf(0f) }
+                var showKamehameha by remember { mutableStateOf(false) }
 
-enum class ProgressState {
-    Idle, Progressing
-}
-
-@ExperimentalAnimationApi
-@Composable
-fun Sample() {
-    SegmentedProgressBarTheme {
-        val density = LocalDensity.current
-
-        // Animation properties
-        val progressAnimationDuration = 1000
-        val breathEffectAnimationDuration = 1800
-        val kamehamehaSize = 38.dp
-        var enableBreathEffectAnimation by remember { mutableStateOf(false) }
-        var enableKamehamehaAnimation by remember { mutableStateOf(false) }
-
-        // Toggles to disable some properties for custom animations for rendering reasons
-        val enableProgressAlpha by remember {
-            derivedStateOf { !enableBreathEffectAnimation }
-        }
-        val enableAngle by remember {
-            derivedStateOf { !enableKamehamehaAnimation }
-        }
-
-        // Segment progress bar properties
-        var segmentCount by remember { mutableStateOf(3f) }
-        var segmentSpacing by remember { mutableStateOf(10.dp) }
-        var segmentAngle by remember { mutableStateOf(0f) }
-        var segmentColor by remember { mutableStateOf(SegmentColor(Color.Gray, 1f)) }
-        var progressColor by remember { mutableStateOf(SegmentColor(Green200, 1f)) }
-        var progress by remember { mutableStateOf(0f) }
-        var progressState by remember { mutableStateOf(ProgressState.Idle) }
-        val drawBehindProgress by remember {
-            derivedStateOf { !enableBreathEffectAnimation || progressState == ProgressState.Progressing }
-        }
-
-        // Breath effect animation properties
-        /**
-         * Example of custom animation with alpha breathing effect
-         * Infinite animation is started when option is enabled and when progress is reaching previous to last segment, otherwise removed from composition
-         * Using keyframes for higher customization. Animation is in four stages
-         * 1. First half, keep progressAlpha
-         * 2. From half to 75% duration, duck to 0.3% of progressAlpha
-         * 3. From 75% to completion, restore to progressAlpha
-         */
-        val animatedProgressAlpha = if (enableBreathEffectAnimation && progressState == ProgressState.Idle && progress.compareTo(segmentCount - 1) == 0) {
-            val infiniteTransition = rememberInfiniteTransition()
-            infiniteTransition.animateFloat(
-                initialValue = progressColor.alpha,
-                targetValue = progressColor.alpha,
-                animationSpec = infiniteRepeatable(
-                    animation = keyframes {
-                        durationMillis = breathEffectAnimationDuration
-                        progressColor.alpha.at(breathEffectAnimationDuration / 2)
-                        (progressColor.alpha * 0.3f).at(3 * breathEffectAnimationDuration / 4)
-                    },
-                    repeatMode = RepeatMode.Restart,
-                ),
-            ).value
-        } else {
-            progressColor.alpha
-        }
-
-        // Kamehameha animation properties
-        var offsetKamehameha by remember { mutableStateOf(0f) }
-        val showKamehameha by remember {
-            derivedStateOf {
-                enableKamehamehaAnimation && progressState == ProgressState.Progressing
-            }
-        }
-
-        Surface(
-            modifier = Modifier.fillMaxHeight(),
-            color = MaterialTheme.colors.background
-        ) {
-            Column(
-                modifier = Modifier.padding(20.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .clipToBounds(),
-                    contentAlignment = CenterStart,
-                ) {
-
-                    SegmentedProgressBar(
-                        modifier = Modifier.height(16.dp),
-                        segmentCount = segmentCount.toInt(),
-                        spacing = segmentSpacing,
-                        angle = segmentAngle,
-                        progress = progress,
-                        segmentColor = SegmentColor(
-                            color = segmentColor.color,
-                            alpha = segmentColor.alpha,
-                        ),
-                        progressColor = SegmentColor(
-                            color = progressColor.color,
-                            alpha = animatedProgressAlpha,
-                        ),
-                        drawSegmentsBehindProgress = drawBehindProgress,
-                        progressAnimationSpec = tween(
-                            durationMillis = progressAnimationDuration,
-                            easing = LinearEasing,
-                        ),
-                        onProgressChanged = { _: Float, progressCoordinates: SegmentCoordinates ->
-                            progressState = ProgressState.Progressing
-                            offsetKamehameha = progressCoordinates.topRightX - density.run { kamehamehaSize.toPx() }
-                        },
-                        onProgressFinished = {
-                            progressState = ProgressState.Idle
+                Sample(
+                    kamehamehaAnimationContainer = {
+                        androidx.compose.animation.AnimatedVisibility(
+                            visible = showKamehameha,
+                        ) {
+                            val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_kamehameha))
+                            LottieAnimation(
+                                modifier = Modifier
+                                    .size(kamehamehaSize)
+                                    .graphicsLayer(translationX = offsetKamehameha),
+                                composition = composition,
+                                iterations = LottieConstants.IterateForever,
+                            )
                         }
-                    )
-
-                    androidx.compose.animation.AnimatedVisibility(
-                        visible = showKamehameha,
-                    ) {
-                        val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_kamehameha))
-                        LottieAnimation(
-                            modifier = Modifier
-                                .size(kamehamehaSize)
-                                .graphicsLayer(translationX = offsetKamehameha),
-                            composition = composition,
-                            iterations = LottieConstants.IterateForever,
-                        )
-                    }
-                }
-
-                Configurator(
-                    segmentCount = segmentCount,
-                    segmentSpacing = segmentSpacing,
-                    segmentAngle = segmentAngle,
-                    progress = progress,
-                    segmentColor = segmentColor,
-                    progressColor = progressColor,
-                    enableAngle = enableAngle,
-                    enableProgressAlpha = enableProgressAlpha,
-                    enableBreathEffectAnimation = enableBreathEffectAnimation,
-                    enableKamehamehaAnimation = enableKamehamehaAnimation,
-                    onSegmentCountChange = { segmentCount = it },
-                    onProgressChange = { progress = it },
-                    onSpacingChange = { segmentSpacing = it },
-                    onAngleChange = { segmentAngle = it },
-                    onSegmentColorChange = { segmentColor = it },
-                    onProgressColorChange = { progressColor = it },
-                    onBreathEffectAnimationToggle = { enableBreathEffectAnimation = it },
-                    onKamehamehaAnimationToggle = { enableKamehamehaAnimation = it },
-                    modifier = Modifier.padding(top = 20.dp),
+                    },
+                    onKamehamehaToggle = { showKamehameha = it },
+                    onKamehamehaOffsetChange = { offsetKamehameha = it }
                 )
             }
         }
     }
 }
 
+private enum class ProgressState {
+    Idle, Progressing
+}
+
+@Composable
+fun Sample(
+    kamehamehaAnimationContainer: @Composable () -> Unit = {},
+    onKamehamehaToggle: (Boolean) -> Unit = {},
+    onKamehamehaOffsetChange: (Float) -> Unit = {},
+) {
+    val density = LocalDensity.current
+
+    // Animation properties
+    val progressAnimationDuration = 1000
+    val breathEffectAnimationDuration = 1800
+    var enableBreathEffectAnimation by remember { mutableStateOf(false) }
+    var enableKamehamehaAnimation by remember { mutableStateOf(false) }
+
+    // Toggles to disable some properties for custom animations for rendering reasons
+    val enableProgressAlpha by remember {
+        derivedStateOf { !enableBreathEffectAnimation }
+    }
+    val enableAngle by remember {
+        derivedStateOf { !enableKamehamehaAnimation }
+    }
+
+    // Segment progress bar properties
+    var segmentCount by remember { mutableStateOf(3f) }
+    var segmentSpacing by remember { mutableStateOf(10.dp) }
+    var segmentAngle by remember { mutableStateOf(0f) }
+    var segmentColor by remember { mutableStateOf(SegmentColor(Color.Gray, 1f)) }
+    var progressColor by remember { mutableStateOf(SegmentColor(Green200, 1f)) }
+    var progress by remember { mutableStateOf(0f) }
+    var progressState by remember { mutableStateOf(ProgressState.Idle) }
+    val drawBehindProgress by remember {
+        derivedStateOf { !enableBreathEffectAnimation || progressState == ProgressState.Progressing }
+    }
+
+    // Breath effect animation properties
+    /**
+     * Example of custom animation with alpha breathing effect
+     * Infinite animation is started when option is enabled and when progress is reaching previous to last segment, otherwise removed from composition
+     * Using keyframes for higher customization. Animation is in four stages
+     * 1. First half, keep progressAlpha
+     * 2. From half to 75% duration, duck to 0.3% of progressAlpha
+     * 3. From 75% to completion, restore to progressAlpha
+     */
+    val animatedProgressAlpha = if (enableBreathEffectAnimation && progressState == ProgressState.Idle && progress.compareTo(segmentCount - 1) == 0) {
+        val infiniteTransition = rememberInfiniteTransition()
+        infiniteTransition.animateFloat(
+            initialValue = progressColor.alpha,
+            targetValue = progressColor.alpha,
+            animationSpec = infiniteRepeatable(
+                animation = keyframes {
+                    durationMillis = breathEffectAnimationDuration
+                    progressColor.alpha.at(breathEffectAnimationDuration / 2)
+                    (progressColor.alpha * 0.3f).at(3 * breathEffectAnimationDuration / 4)
+                },
+                repeatMode = RepeatMode.Restart,
+            ),
+        ).value
+    } else {
+        progressColor.alpha
+    }
+
+    Surface(
+        modifier = Modifier.fillMaxHeight(),
+        color = MaterialTheme.colors.background
+    ) {
+        Column(
+            modifier = Modifier.padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .clipToBounds(),
+                contentAlignment = CenterStart,
+            ) {
+
+                SegmentedProgressBar(
+                    modifier = Modifier.height(16.dp),
+                    segmentCount = segmentCount.toInt(),
+                    spacing = segmentSpacing,
+                    angle = segmentAngle,
+                    progress = progress,
+                    segmentColor = SegmentColor(
+                        color = segmentColor.color,
+                        alpha = segmentColor.alpha,
+                    ),
+                    progressColor = SegmentColor(
+                        color = progressColor.color,
+                        alpha = animatedProgressAlpha,
+                    ),
+                    drawSegmentsBehindProgress = drawBehindProgress,
+                    progressAnimationSpec = tween(
+                        durationMillis = progressAnimationDuration,
+                        easing = LinearEasing,
+                    ),
+                    onProgressChanged = { _: Float, progressCoordinates: SegmentCoordinates ->
+                        progressState = ProgressState.Progressing
+                        onKamehamehaToggle(enableKamehamehaAnimation)
+                        onKamehamehaOffsetChange(progressCoordinates.topRightX - density.run { kamehamehaSize.toPx() })
+                    },
+                    onProgressFinished = {
+                        progressState = ProgressState.Idle
+                        onKamehamehaToggle(false)
+                    }
+                )
+
+                kamehamehaAnimationContainer()
+            }
+
+            Configurator(
+                segmentCount = segmentCount,
+                segmentSpacing = segmentSpacing,
+                segmentAngle = segmentAngle,
+                progress = progress,
+                segmentColor = segmentColor,
+                progressColor = progressColor,
+                enableAngle = enableAngle,
+                enableProgressAlpha = enableProgressAlpha,
+                enableBreathEffectAnimation = enableBreathEffectAnimation,
+                enableKamehamehaAnimation = enableKamehamehaAnimation,
+                onSegmentCountChange = { segmentCount = it },
+                onProgressChange = { progress = it },
+                onSpacingChange = { segmentSpacing = it },
+                onAngleChange = { segmentAngle = it },
+                onSegmentColorChange = { segmentColor = it },
+                onProgressColorChange = { progressColor = it },
+                onBreathEffectAnimationToggle = { enableBreathEffectAnimation = it },
+                onKamehamehaAnimationToggle = { enableKamehamehaAnimation = it },
+                modifier = Modifier.padding(top = 20.dp),
+            )
+        }
+    }
+}
+
 @Composable
 fun Configurator(
-    segmentCount: Float, // TODO: Wrap into VM with State?
+    segmentCount: Float,
     segmentSpacing: Dp,
     segmentAngle: Float,
     progress: Float,
