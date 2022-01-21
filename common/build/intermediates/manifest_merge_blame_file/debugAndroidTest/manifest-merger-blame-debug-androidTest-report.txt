@@ -1,0 +1,90 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="me.stephenvinouze.common.test" >
+4
+5    <uses-sdk
+5-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:5:15-41
+7        android:targetSdkVersion="31" />
+7-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:11:5-15:79
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:11:22-75
+11        android:functionalTest="false"
+11-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:13:22-53
+13        android:label="Tests for me.stephenvinouze.common.test"
+13-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:15:22-77
+14        android:targetPackage="me.stephenvinouze.common.test" />
+14-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:12:22-75
+15
+16    <application
+16-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:7:5-9:19
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+18        android:debuggable="true" >
+19        <uses-library android:name="android.test.runner" />
+19-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:8:9-60
+19-->/Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13297628979405210432.xml:8:23-57
+20
+21        <activity
+21-->[androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:25:9-27:39
+22            android:name="androidx.compose.ui.tooling.PreviewActivity"
+22-->[androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:26:13-71
+23            android:exported="true" />
+23-->[androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:27:13-36
+24
+25        <provider
+25-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+26            android:name="androidx.startup.InitializationProvider"
+26-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+27            android:authorities="me.stephenvinouze.common.test.androidx-startup"
+27-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+28            android:exported="false" >
+28-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+29            <meta-data
+29-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+30                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+30-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+31                android:value="androidx.startup" />
+31-->[androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+32            <meta-data
+32-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+33                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+33-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+34                android:value="androidx.startup" />
+34-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+35            <meta-data
+35-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:31:13-33:52
+36                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+36-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:32:17-85
+37                android:value="androidx.startup" />
+37-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:33:17-49
+38        </provider>
+39
+40        <receiver
+40-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:36:9-45:20
+41            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+41-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:37:13-76
+42            android:directBootAware="false"
+42-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:38:13-44
+43            android:enabled="true"
+43-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:39:13-35
+44            android:exported="true"
+44-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:40:13-36
+45            android:permission="android.permission.DUMP" >
+45-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:41:13-57
+46            <intent-filter>
+46-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:42:13-44:29
+47                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+47-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:43:17-91
+47-->[androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:43:25-88
+48            </intent-filter>
+49        </receiver>
+50    </application>
+51
+52</manifest>

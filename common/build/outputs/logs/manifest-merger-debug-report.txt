@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml:2:1-106
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml:2:1-106
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml:2:1-106
+	package
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml:2:70-104
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/common/src/androidMain/AndroidManifest.xml

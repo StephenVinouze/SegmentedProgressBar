@@ -1,0 +1,2 @@
+me/stephenvinouze/common/test/BuildConfig.java
+ me.stephenvinouze.common.test.BuildConfig

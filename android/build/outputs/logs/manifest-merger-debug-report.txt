@@ -1,0 +1,305 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+MERGED from [:common] /Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.airbnb.android:lottie-compose:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/cd5ba49a0b90674f2976fa74612be946/transformed/lottie-compose-4.2.2/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.activity:activity-compose:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33756de604d41720fde047c3f01f03c1/transformed/activity-compose-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/e02e0fdf9c6bb4600ce97872a0a87a6a/transformed/material-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material-ripple:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/a1690a494257d5784cc0cec038644a32/transformed/material-ripple-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.foundation:foundation:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/e41e0236f194fcc05510d58389e2bba0/transformed/foundation-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.animation:animation:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8902d1216ac2faf5af505215159cdf66/transformed/animation-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.foundation:foundation-layout:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/d1fb9d799a1c1f7d6dcc1551393c174f/transformed/foundation-layout-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material-icons-core:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/d95e93f89352a785b9c66b3e77c8ee26/transformed/material-icons-core-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-tooling-data:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/13a622b1f79ae0bafeb54c7b42710f94/transformed/ui-tooling-data-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.animation:animation-core:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8b965e27439269b5ff13f807bac5a29f/transformed/animation-core-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/cb086d7319c507bf2e8fe245c9e94333/transformed/ui-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/2e278dad22df72d75c8f18d1bdf01f95/transformed/ui-tooling-preview-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-text:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/859e6a0efa64513ceed6f670c803826a/transformed/ui-text-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-graphics:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/415f9c3f014dec730b68eb7480523794/transformed/ui-graphics-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.runtime:runtime-saveable:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/74cae9c5b24bf51439bcc7d13f64a493/transformed/runtime-saveable-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-unit:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/0fcf3ba18f18fd4411dbcd456a8362db/transformed/ui-unit-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-geometry:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/1fb9341c4162f8263be122606e2306d9/transformed/ui-geometry-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.runtime:runtime:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/ba5c323748283c8531b15c562c6d9cee/transformed/runtime-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ef7ba906f477b380e3b562a035f9cbe5/transformed/activity-ktx-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/0d0e38ba2acc7e7fecbae2679e9c9ab5/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/a70ff9b31812f913267b1ac588a3b2ac/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ebdb4ff13e808d7c50a6983ea5c0eddb/transformed/core-ktx-1.7.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.airbnb.android:lottie:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/992e3df4142f22800850cd5c50498b14/transformed/lottie-4.2.2/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/stephenvinouze/.gradle/caches/transforms-3/74c339f37940a7bdd05d59aa4142f563/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/stephenvinouze/.gradle/caches/transforms-3/b851d24d75f9d12e5158403e1354bb14/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/9c6ad37054d43f22238e85237d2489e3/transformed/activity-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/3a23725b413711bdc40ddbd93b7ba786/transformed/savedstate-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-util:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/6ad893c6ccd49e4e7d2639d5257e2758/transformed/ui-util-1.1.0-beta02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/stephenvinouze/.gradle/caches/transforms-3/7fac2bd81a1e5674c923d5bf28b4203d/transformed/appcompat-resources-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/5080fc18806688fbe95a35e16d81e345/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/412ed27c17220914619480e06e985b84/transformed/emoji2-views-helper-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/6bbece00beb8eae17ad522208cdd1e78/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ab59a1c3a2bbf49ebc5d0aedebadf95c/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/61f49a61fa98bfd25c43de6df2910e94/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/2527e9ec4305da1b7a878155f27a7147/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/fabeb7608d77ec7ddc3254896e6c1da2/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/62f01d130841ff34eafb24c90342fe27/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/3822a4b371aa7713531d4415a71e0276/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/1422b9ff611f35602503f4b1cdb81e63/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/90edf9f9b8c279119c94085c3eea0460/transformed/savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/687d8884189d3cd03851a6cde4351548/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/stephenvinouze/.gradle/caches/transforms-3/c479077825fd602cf1c67eaf3e0e8f73/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:17:1-48:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/aef1a7cf189e8c8ac9125c5aefc3ac35/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/89ccb3672ef97747e904e3b491ffdc13/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/b198820be11ac35678e7c4a0788e593c/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/7f4552c2d8290890144ef79f6654c4e1/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/90cd65caec12214da5d4a5dd43e6d965/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f0cd34f51c992b901febf1920271b8a4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/35372d6451a88dc767ea22efad8d961e/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+	package
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:70-105
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:1-14:12
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:3:5-13:19
+MERGED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:24:5-28:19
+MERGED from [com.airbnb.android:lottie:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/992e3df4142f22800850cd5c50498b14/transformed/lottie-4.2.2/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/992e3df4142f22800850cd5c50498b14/transformed/lottie-4.2.2/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/stephenvinouze/.gradle/caches/transforms-3/c479077825fd602cf1c67eaf3e0e8f73/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/stephenvinouze/.gradle/caches/transforms-3/c479077825fd602cf1c67eaf3e0e8f73/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:25:5-46:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:25:5-46:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:5:13-39
+	android:allowBackup
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:4:13-40
+	android:theme
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:6:13-69
+activity#me.stephenvinouze.android.MainActivity
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:7:13-12:20
+	android:exported
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:7:52-75
+	android:name
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:7:23-51
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:8:13-11:29
+action#android.intent.action.MAIN
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:9:17-68
+	android:name
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:9:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:10:17-76
+	android:name
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml:10:27-74
+uses-sdk
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+MERGED from [:common] /Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:common] /Users/stephenvinouze/Documents/SegmentedProgressBar/common/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie-compose:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/cd5ba49a0b90674f2976fa74612be946/transformed/lottie-compose-4.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie-compose:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/cd5ba49a0b90674f2976fa74612be946/transformed/lottie-compose-4.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-compose:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33756de604d41720fde047c3f01f03c1/transformed/activity-compose-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-compose:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33756de604d41720fde047c3f01f03c1/transformed/activity-compose-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/e02e0fdf9c6bb4600ce97872a0a87a6a/transformed/material-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/e02e0fdf9c6bb4600ce97872a0a87a6a/transformed/material-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-ripple:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/a1690a494257d5784cc0cec038644a32/transformed/material-ripple-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-ripple:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/a1690a494257d5784cc0cec038644a32/transformed/material-ripple-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.foundation:foundation:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/e41e0236f194fcc05510d58389e2bba0/transformed/foundation-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.foundation:foundation:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/e41e0236f194fcc05510d58389e2bba0/transformed/foundation-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.animation:animation:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8902d1216ac2faf5af505215159cdf66/transformed/animation-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.animation:animation:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8902d1216ac2faf5af505215159cdf66/transformed/animation-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.foundation:foundation-layout:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/d1fb9d799a1c1f7d6dcc1551393c174f/transformed/foundation-layout-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.foundation:foundation-layout:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/d1fb9d799a1c1f7d6dcc1551393c174f/transformed/foundation-layout-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-icons-core:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/d95e93f89352a785b9c66b3e77c8ee26/transformed/material-icons-core-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-icons-core:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/d95e93f89352a785b9c66b3e77c8ee26/transformed/material-icons-core-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-data:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/13a622b1f79ae0bafeb54c7b42710f94/transformed/ui-tooling-data-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-data:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/13a622b1f79ae0bafeb54c7b42710f94/transformed/ui-tooling-data-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.animation:animation-core:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8b965e27439269b5ff13f807bac5a29f/transformed/animation-core-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.animation:animation-core:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8b965e27439269b5ff13f807bac5a29f/transformed/animation-core-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/cb086d7319c507bf2e8fe245c9e94333/transformed/ui-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/cb086d7319c507bf2e8fe245c9e94333/transformed/ui-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/2e278dad22df72d75c8f18d1bdf01f95/transformed/ui-tooling-preview-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/2e278dad22df72d75c8f18d1bdf01f95/transformed/ui-tooling-preview-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-text:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/859e6a0efa64513ceed6f670c803826a/transformed/ui-text-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-text:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/859e6a0efa64513ceed6f670c803826a/transformed/ui-text-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-graphics:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/415f9c3f014dec730b68eb7480523794/transformed/ui-graphics-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-graphics:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/415f9c3f014dec730b68eb7480523794/transformed/ui-graphics-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime-saveable:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/74cae9c5b24bf51439bcc7d13f64a493/transformed/runtime-saveable-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime-saveable:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/74cae9c5b24bf51439bcc7d13f64a493/transformed/runtime-saveable-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-unit:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/0fcf3ba18f18fd4411dbcd456a8362db/transformed/ui-unit-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-unit:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/0fcf3ba18f18fd4411dbcd456a8362db/transformed/ui-unit-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-geometry:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/1fb9341c4162f8263be122606e2306d9/transformed/ui-geometry-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-geometry:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/1fb9341c4162f8263be122606e2306d9/transformed/ui-geometry-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/ba5c323748283c8531b15c562c6d9cee/transformed/runtime-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/ba5c323748283c8531b15c562c6d9cee/transformed/runtime-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ef7ba906f477b380e3b562a035f9cbe5/transformed/activity-ktx-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ef7ba906f477b380e3b562a035f9cbe5/transformed/activity-ktx-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/0d0e38ba2acc7e7fecbae2679e9c9ab5/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/0d0e38ba2acc7e7fecbae2679e9c9ab5/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/a70ff9b31812f913267b1ac588a3b2ac/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/a70ff9b31812f913267b1ac588a3b2ac/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ebdb4ff13e808d7c50a6983ea5c0eddb/transformed/core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ebdb4ff13e808d7c50a6983ea5c0eddb/transformed/core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/992e3df4142f22800850cd5c50498b14/transformed/lottie-4.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:4.2.2] /Users/stephenvinouze/.gradle/caches/transforms-3/992e3df4142f22800850cd5c50498b14/transformed/lottie-4.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/stephenvinouze/.gradle/caches/transforms-3/74c339f37940a7bdd05d59aa4142f563/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/stephenvinouze/.gradle/caches/transforms-3/74c339f37940a7bdd05d59aa4142f563/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/stephenvinouze/.gradle/caches/transforms-3/b851d24d75f9d12e5158403e1354bb14/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/stephenvinouze/.gradle/caches/transforms-3/b851d24d75f9d12e5158403e1354bb14/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/9c6ad37054d43f22238e85237d2489e3/transformed/activity-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/9c6ad37054d43f22238e85237d2489e3/transformed/activity-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/3a23725b413711bdc40ddbd93b7ba786/transformed/savedstate-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/3a23725b413711bdc40ddbd93b7ba786/transformed/savedstate-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-util:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/6ad893c6ccd49e4e7d2639d5257e2758/transformed/ui-util-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-util:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/6ad893c6ccd49e4e7d2639d5257e2758/transformed/ui-util-1.1.0-beta02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/stephenvinouze/.gradle/caches/transforms-3/7fac2bd81a1e5674c923d5bf28b4203d/transformed/appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/stephenvinouze/.gradle/caches/transforms-3/7fac2bd81a1e5674c923d5bf28b4203d/transformed/appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/5080fc18806688fbe95a35e16d81e345/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/5080fc18806688fbe95a35e16d81e345/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/412ed27c17220914619480e06e985b84/transformed/emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/412ed27c17220914619480e06e985b84/transformed/emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/6bbece00beb8eae17ad522208cdd1e78/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/6bbece00beb8eae17ad522208cdd1e78/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ab59a1c3a2bbf49ebc5d0aedebadf95c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/ab59a1c3a2bbf49ebc5d0aedebadf95c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/61f49a61fa98bfd25c43de6df2910e94/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/61f49a61fa98bfd25c43de6df2910e94/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/2527e9ec4305da1b7a878155f27a7147/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/2527e9ec4305da1b7a878155f27a7147/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/fabeb7608d77ec7ddc3254896e6c1da2/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/fabeb7608d77ec7ddc3254896e6c1da2/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/62f01d130841ff34eafb24c90342fe27/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/62f01d130841ff34eafb24c90342fe27/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] /Users/stephenvinouze/.gradle/caches/transforms-3/33ae01582d627778404ed1ccb791f4cc/transformed/core-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/3822a4b371aa7713531d4415a71e0276/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/3822a4b371aa7713531d4415a71e0276/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/1422b9ff611f35602503f4b1cdb81e63/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/1422b9ff611f35602503f4b1cdb81e63/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/90edf9f9b8c279119c94085c3eea0460/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/90edf9f9b8c279119c94085c3eea0460/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/687d8884189d3cd03851a6cde4351548/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/687d8884189d3cd03851a6cde4351548/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/stephenvinouze/.gradle/caches/transforms-3/c479077825fd602cf1c67eaf3e0e8f73/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/stephenvinouze/.gradle/caches/transforms-3/c479077825fd602cf1c67eaf3e0e8f73/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/aef1a7cf189e8c8ac9125c5aefc3ac35/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/aef1a7cf189e8c8ac9125c5aefc3ac35/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/89ccb3672ef97747e904e3b491ffdc13/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/stephenvinouze/.gradle/caches/transforms-3/89ccb3672ef97747e904e3b491ffdc13/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/b198820be11ac35678e7c4a0788e593c/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/b198820be11ac35678e7c4a0788e593c/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/7f4552c2d8290890144ef79f6654c4e1/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/7f4552c2d8290890144ef79f6654c4e1/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/90cd65caec12214da5d4a5dd43e6d965/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/90cd65caec12214da5d4a5dd43e6d965/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f0cd34f51c992b901febf1920271b8a4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f0cd34f51c992b901febf1920271b8a4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/35372d6451a88dc767ea22efad8d961e/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/stephenvinouze/.gradle/caches/transforms-3/35372d6451a88dc767ea22efad8d961e/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		ADDED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+		INJECTED from /Users/stephenvinouze/Documents/SegmentedProgressBar/android/src/main/AndroidManifest.xml
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:25:9-27:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/56cff154039af2dff1eda1a765fdcf6e/transformed/ui-tooling-1.1.0-beta02/AndroidManifest.xml:26:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/1e3e9504a8cc79e4d0f95bcf2cb5e6f4/transformed/startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:30:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/stephenvinouze/.gradle/caches/transforms-3/f9af4cf285d36a0896360c9571ca2ae8/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/stephenvinouze/.gradle/caches/transforms-3/537faab9bad8329645ec6744351b212f/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:32:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:36:9-45:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:39:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:40:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:41:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:38:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:37:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:42:13-44:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:43:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0-beta02] /Users/stephenvinouze/.gradle/caches/transforms-3/8822795c854e2ce5ded698a2e1bf5596/transformed/profileinstaller-1.1.0-beta02/AndroidManifest.xml:43:25-88

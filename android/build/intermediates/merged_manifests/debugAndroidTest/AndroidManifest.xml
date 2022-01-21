@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.stephenvinouze.android.test">
+
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="31" />
+
+    <application android:debuggable="true" >
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+                     android:targetPackage="me.stephenvinouze.android"
+                     android:handleProfiling="false"
+                     android:functionalTest="false"
+                     android:label="Tests for me.stephenvinouze.android"/>
+</manifest>

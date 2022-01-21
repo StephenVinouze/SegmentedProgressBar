@@ -1,0 +1,2 @@
+me/stephenvinouze/android/test/BuildConfig.java
+ me.stephenvinouze.android.test.BuildConfig

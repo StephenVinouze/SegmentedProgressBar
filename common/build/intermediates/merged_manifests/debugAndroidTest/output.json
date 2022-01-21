@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "applicationId": "me.stephenvinouze.common.test",
+  "variantType": "ANDROID_TEST",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": -1,
+        "outputFile": "common-debug-androidTest.apk",
+        "fullName": "debugAndroidTest",
+        "baseName": "debug-androidTest",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {}
+    }
+  ]
+}

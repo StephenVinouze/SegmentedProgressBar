@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/stephenvinouze/Documents/SegmentedProgressBar/android/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/stephenvinouze/.gradle/caches/transforms-3/cb086d7319c507bf2e8fe245c9e94333/transformed/ui-1.1.0-beta02/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                },
+                {
+                    "source": "/Users/stephenvinouze/.gradle/caches/transforms-3/74c339f37940a7bdd05d59aa4142f563/transformed/appcompat-1.4.1/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "104,174,245",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "169,240,308"
+                    }
+                }
+            ]
+        }
+    ]
+}
