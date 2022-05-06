@@ -9,6 +9,7 @@ import androidx.compose.foundation.progressSemantics
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.platform.LocalDensity
@@ -16,6 +17,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
+
+@ExperimentalMultiplatform
+@OptionalExpectation
+internal expect annotation class Preview()
 
 /**
  * Progress bar split into several segments.
@@ -138,7 +143,6 @@ private fun DrawScope.drawSegment(coordinates: SegmentCoordinates, color: Segmen
     )
 }
 
-/*
 @Preview(widthDp = 300, heightDp = 30)
 @Composable
 fun ThreeSegmentedProgressBarWithSpacing() {
@@ -288,4 +292,4 @@ fun ThreeSegmentedProgressBarWithHiddenSegmentBehindProgress() {
             alpha = 0.3f,
         )
     )
-}*/
+}
