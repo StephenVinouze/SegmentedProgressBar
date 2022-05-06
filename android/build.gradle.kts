@@ -7,6 +7,7 @@ plugins {
 dependencies {
     implementation(project(":common"))
     implementation("androidx.activity:activity-compose:1.4.0")
+    implementation("com.google.android.material:material:1.6.0")
     implementation("com.airbnb.android:lottie-compose:4.2.2")
 }
 
