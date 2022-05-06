@@ -1,4 +1,4 @@
-package me.stephenvinouze.common
+package com.stephenvinouze.segmentedprogressbar
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
@@ -13,7 +13,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.stephenvinouze.segmentedprogressbar.SegmentedProgressBar
 import com.stephenvinouze.segmentedprogressbar.models.SegmentColor
 import com.stephenvinouze.segmentedprogressbar.models.SegmentCoordinates
 

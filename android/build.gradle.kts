@@ -14,7 +14,7 @@ dependencies {
 android {
     compileSdk = 31
     defaultConfig {
-        applicationId = "me.stephenvinouze.android"
+        applicationId = "com.stephenvinouze.segmentedprogressbar"
         minSdk = 21
         targetSdk = 31
         versionCode = 1

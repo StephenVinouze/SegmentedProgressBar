@@ -1,4 +1,4 @@
-package me.stephenvinouze.android
+package com.stephenvinouze.segmentedprogressbar
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -14,8 +14,6 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
-import me.stephenvinouze.common.App
-import me.stephenvinouze.common.kamehamehaSize
 
 @ExperimentalAnimationApi
 class MainActivity : AppCompatActivity() {

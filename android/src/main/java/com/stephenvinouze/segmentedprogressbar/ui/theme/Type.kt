@@ -1,4 +1,4 @@
-package com.stephenvinouze.sample.ui.theme
+package com.stephenvinouze.segmentedprogressbar.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

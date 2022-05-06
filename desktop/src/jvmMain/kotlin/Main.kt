@@ -1,5 +1,4 @@
-import androidx.compose.animation.ExperimentalAnimationApi
-import me.stephenvinouze.common.App
+import com.stephenvinouze.segmentedprogressbar.App
 import androidx.compose.material.MaterialTheme
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
